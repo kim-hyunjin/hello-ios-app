@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     let timeSelector: Selector = #selector(ViewController.updateTime)
     let interval = 1.0
     var alarmTime: String?
+    var alarmOff = false
+    var nowAlarming = false
     
     @IBOutlet var lblCurrentTime: UILabel!
     @IBOutlet var lblPickerTime: UILabel!
@@ -51,15 +53,30 @@ class ViewController: UIViewController {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm aaa"
         alarmTime = dateFormatter.string(from: date)
+        alarmOff = false
+        nowAlarming = false
     }
     
     func alarm(date: Date) {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm aaa"
-        if dateFormatter.string(from: date) == alarmTime {
-            view.backgroundColor = UIColor.red
-        } else {
-            view.backgroundColor = UIColor.white
+        
+//        if dateFormatter.string(from: date) == alarmTime {
+//            view.backgroundColor = UIColor.red
+//        } else {
+//            view.backgroundColor = UIColor.white
+//        }
+        let isAlarmTime = dateFormatter.string(from: date) == alarmTime
+        
+        if isAlarmTime && !alarmOff && !nowAlarming {
+            let alarmAlert: UIAlertController = UIAlertController(title: "알림", message: "설정된 알람 시간입니다!", preferredStyle: .alert)
+            let alarmOffAction: UIAlertAction = UIAlertAction(title: "네, 알겠습니다.", style: .default, handler: { ACTION in self.alarmOff = true
+            })
+            alarmAlert.addAction(alarmOffAction)
+            
+            present(alarmAlert, animated: true, completion: { () -> Void in
+                self.nowAlarming = true
+            })
         }
     }
 }
