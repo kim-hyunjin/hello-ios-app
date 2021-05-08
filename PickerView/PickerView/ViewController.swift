@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     let MAX_ARRAY_NUM = 10
     let PICKER_VIEW_COLUMN = 1
+    let PICKER_VIEW_HEIGHT:CGFloat = 80
     var imageArray: [UIImage?] = []
     var imageFileNames: [String] = []
     
@@ -43,14 +44,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return PICKER_VIEW_COLUMN
     }
     
+    // return height of row for each component
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return PICKER_VIEW_HEIGHT
+    }
+    
     // return the # of rows in each component
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return imageFileNames.count
     }
     
     // 피커 뷰 컴포넌트의 각 열에 들어갈 타이틀을 String값으로 넘겨준다
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return imageFileNames[row]
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return imageFileNames[row]
+//    }
+    // 피커 뷰 컴퓨넌트의 각 열에 들어갈 이미지를 리턴한다.
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let imageView = UIImageView(image: imageArray[row])
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 150)
+        return imageView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
