@@ -73,12 +73,19 @@ class TableViewController: UITableViewController {
         return "삭제"
     }
 
-    /*
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let itemToMove = items[(fromIndexPath as NSIndexPath).row]
+        let itemImageToMove = itemsImageFiles[(fromIndexPath as NSIndexPath).row]
+        
+        items.remove(at: (fromIndexPath as NSIndexPath).row)
+        itemsImageFiles.remove(at: (fromIndexPath as NSIndexPath).row)
+        
+        items.insert(itemToMove, at: (to as NSIndexPath).row)
+        itemsImageFiles.insert(itemImageToMove, at: (to as NSIndexPath).row)
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
