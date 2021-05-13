@@ -7,11 +7,11 @@
 
 import UIKit
 
+var items = ["책 구매", "철수와 약속", "스터디 준비하기"]
+var itemsImageFiles = ["cart.png", "clock.png", "pencil.png"]
+
 class TableViewController: UITableViewController {
     
-    var items = ["책 구매", "철수와 약속", "스터디 준비하기"]
-    var itemsImageFiles = ["cart.png", "clock.png", "pencil.png"]
-
     @IBOutlet var tvListView: UITableView!
     
     override func viewDidLoad() {
@@ -84,6 +84,17 @@ class TableViewController: UITableViewController {
         
         items.insert(itemToMove, at: (to as NSIndexPath).row)
         itemsImageFiles.insert(itemImageToMove, at: (to as NSIndexPath).row)
+    }
+    
+    /*
+        뷰가 보일때 호출되는 함수들
+        ViewDidLoad -> ViewWillAppear -> ViewDidApppear
+        ViewDidLoad: 뷰가 로드되었을 때 호출되는 함수. 뷰가 생성될 때 한 번만 호출된다.
+        ViewWillAppear: 뷰가 노출될 준비가 끝났을 때 호출되는 함수. 뷰가 노출될 때마다 호출된다.
+        ViewDidAppear: 뷰가 완전히 보인 후 호출되는 함수.
+     */
+    override func viewWillAppear(_ animated: Bool) {
+        tvListView.reloadData()
     }
     
 
