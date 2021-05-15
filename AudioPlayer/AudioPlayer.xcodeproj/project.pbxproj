@@ -14,6 +14,10 @@
 		11B1F33F264F7A4000AE6C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F33E264F7A4000AE6C25 /* Assets.xcassets */; };
 		11B1F342264F7A4000AE6C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F340264F7A4000AE6C25 /* LaunchScreen.storyboard */; };
 		11B1F34A264F7ED400AE6C25 /* bensound-happyrock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F349264F7ED300AE6C25 /* bensound-happyrock.mp3 */; };
+		11B1F34E264FA6F700AE6C25 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F34B264FA6F700AE6C25 /* record.png */; };
+		11B1F34F264FA6F700AE6C25 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F34C264FA6F700AE6C25 /* pause.png */; };
+		11B1F350264FA6F700AE6C25 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F34D264FA6F700AE6C25 /* play.png */; };
+		11B1F352264FA86700AE6C25 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B1F351264FA86700AE6C25 /* stop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		11B1F341264F7A4000AE6C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11B1F343264F7A4000AE6C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B1F349264F7ED300AE6C25 /* bensound-happyrock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-happyrock.mp3"; sourceTree = "<group>"; };
+		11B1F34B264FA6F700AE6C25 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
+		11B1F34C264FA6F700AE6C25 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		11B1F34D264FA6F700AE6C25 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		11B1F351264FA86700AE6C25 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				11B1F335264F7A3F00AE6C25 /* AppDelegate.swift */,
+				11B1F34C264FA6F700AE6C25 /* pause.png */,
+				11B1F34D264FA6F700AE6C25 /* play.png */,
+				11B1F34B264FA6F700AE6C25 /* record.png */,
+				11B1F351264FA86700AE6C25 /* stop.png */,
 				11B1F349264F7ED300AE6C25 /* bensound-happyrock.mp3 */,
 				11B1F337264F7A3F00AE6C25 /* SceneDelegate.swift */,
 				11B1F339264F7A3F00AE6C25 /* ViewController.swift */,
@@ -127,7 +139,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B1F350264FA6F700AE6C25 /* play.png in Resources */,
+				11B1F352264FA86700AE6C25 /* stop.png in Resources */,
+				11B1F34E264FA6F700AE6C25 /* record.png in Resources */,
 				11B1F34A264F7ED400AE6C25 /* bensound-happyrock.mp3 in Resources */,
+				11B1F34F264FA6F700AE6C25 /* pause.png in Resources */,
 				11B1F342264F7A4000AE6C25 /* LaunchScreen.storyboard in Resources */,
 				11B1F33F264F7A4000AE6C25 /* Assets.xcassets in Resources */,
 				11B1F33D264F7A3F00AE6C25 /* Main.storyboard in Resources */,
